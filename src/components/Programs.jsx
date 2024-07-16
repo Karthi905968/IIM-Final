@@ -5,6 +5,7 @@ import mbahr from "../assets/img/mbahr.png";
 import pgpbm from "../assets/img/pgpbm.png";
 import phd from "../assets/img/phd.png";
 import exphd from "../assets/img/exphd.png";
+import girl from '../assets/img/Student-girl.png'
 
 const programs = [
   {
@@ -53,7 +54,7 @@ const programs = [
         name: "Executive Ph.D",
         image: exphd,
         description:
-          "IM Tiruchirappalli’s Executive Ph.D. is a non-residential doctoral programme designed for senior executives for academic research",
+        "The two-year full-time Post Graduate Programme in Management (PGPM) is the flagship programme of IIM Tiruchirappalli .",
       },
     ],
   },
@@ -61,9 +62,9 @@ const programs = [
 
 const Programs = () => {
   const [selectedProgram, setSelectedProgram] = useState({
-    category: "PGPBM",
-    program: "Executive's MBA",
-    image: pgpbm,
+    category: "PGPM",
+    program: "MBA",
+    image: mba,
     description:
       "IIM Tiruchirappalli launched the PGPBM programme at its Chennai campus to groom working executives who aspire to move into senior leadership roles.",
   });
@@ -75,7 +76,8 @@ const Programs = () => {
   return (
     <>
       <h1 className="main-heading">Programme Highlights</h1>
-      <div className="programmes-container">
+       <div className="programme-main">
+       <div className="programmes-container">
         <div className="programmes-sidebar">
           {programs.map((section) => (
             <div key={section.category}>
@@ -119,6 +121,12 @@ const Programs = () => {
           </div>
         </div>
       </div>
+        <div className="programme-image">
+          <section>
+            <img src={girl} alt="Student" />
+          </section>
+        </div>
+       </div>
     </>
   );
 };

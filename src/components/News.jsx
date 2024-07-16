@@ -19,7 +19,7 @@ const News = () => {
               />
               <div className="blocks">
                 <p>Mar 30, 2024</p>
-                <h3>TWELFTH ANNUAL CONVOCATION 2024</h3>
+                <h3>TWELFTH ANNUAL CONVOCATION 2024 IIM, Tiruchirappali</h3>
                 <button>Read More &gt;</button>
               </div>
             </div>
@@ -30,6 +30,7 @@ const News = () => {
                 className="style-12"
                 src={news2}
                 data-loaded="true"
+                alt="image1"
               />
               <div className="blocks">
                 <p>Jul 08, 2024</p>
@@ -44,10 +45,11 @@ const News = () => {
                 className="style-12"
                 src={news3}
                 data-loaded="true"
+                alt="imge2"
               />
               <div className="blocks">
                 <p>May 19, 2024</p>
-                <h3>Inauguration function for the PGCBAA Batch - 06</h3>
+                <h3>Inauguration function for the PGCBAA Batch - 06 IIM, Tiruchirappali</h3>
                 <button>Read More &gt;</button>
               </div>
             </div>

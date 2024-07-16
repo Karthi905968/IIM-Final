@@ -1,13 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body{
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-.header {
-  font-family: Arial, sans-serif;
+
+.header{
+  position: relative;
+  display: flex;;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 5vw;
 }
+
+.language-toggle p{
+  margin-top: 0;
+  text-align: right;
+  margin-right: 1vw;
+}
+
+.language-toggle span:hover{
+  cursor: pointer;
+  color: gray;
+} 
+
+
+.serach-bar{
+  margin-right: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  height: 35px;
+}
+
+.serach-bar span{
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 36px;
+  width: 35px;
+  background-color: #004080;
+}
+
+.serach-bar span img{
+  width: 20px;
+  height: 20px;
+}
+
+.serach-bar .search{
+  height: 100%;
+  width: 200px;
+}
+
+.serach-bar .search-input{
+  height: 35px;
+  width: 0px;
+  border: none;
+  background-color: #e7e7e7;
+  outline: none;
+  transition: all 0.3s ease-in;
+}
+
+.serach-bar:hover .search-input{
+  width: 200px;
+  padding-left: 1rem;
+
+}
+
+
+
+
+
 
 .header-top {
   background-color: #f8f8f8;
-  padding: 10px 20px;
+  /* padding: 0px 20px; */
   display: flex;
   justify-content: flex-start;
 }
@@ -27,7 +93,7 @@ body{
 .header-main {
   display: flex;
   align-items: center;
-  padding: 20px 20px;
+  /* padding: 20px 20px; */
   background-color: #fff;
   border-bottom: 1px solid #e7e7e7;
 }
@@ -74,7 +140,7 @@ body{
   align-items: center;
   background-color: #fff;
   height: 20px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
 }
 
 .marquee-container {
@@ -93,22 +159,25 @@ body{
   justify-content: center;
   font-size: 1.2em;
   white-space: nowrap;
-  width: 30%;
+  width: 10%;
   position: relative;
 }
 
-.marquee-left::after {
+
+/* .marquee-left::after {
   content: '';
   position: absolute;
   top: 0;
-  right: -10px; /* Adjust to control the slant */
+  right: -13px;
   width: 0;
   height: 0;
-  border-top: 20px solid transparent; /* Adjust height to match the container */
-  border-left: 10px solid #004080; /* Adjust width and color to match the container */
-  border-bottom: 20px solid transparent; /* Adjust height to match the container */
-  z-index: 1; /* Ensure the slant is below the text */
-}
+  border-top: 20px solid transparent;
+  border-left: 20px solid #004080;
+  border-bottom: 20px solid transparent;
+  z-index: 1;
+} */
+
+
 .marquee-left{
   font-weight: 900;
 }
@@ -124,22 +193,22 @@ body{
   padding-left: 30px; /* Add padding to start text a little bit inside */
 }
 
-.marquee-right::before {
+/* .marquee-right::before {
   content: '';
   position: absolute;
   top: 0;
-  left: -10px; /* Adjust to control the slant */
+  left: -10px; 
   width: 0;
   height: 0;
-  border-top: 20px solid transparent; /* Adjust height to match the container */
-  border-right: 10px solid #acd3fb; /* Adjust width and color to match the container */
-  border-bottom: 20px solid transparent; /* Adjust height to match the container */
-  z-index: 1; /* Ensure the slant is below the text */
-}
+  border-top: 20px solid transparent; 
+  border-right: 10px solid #acd3fb; 
+  border-bottom: 20px solid transparent;
+  z-index: 1; 
+} */
 
 .marquee {
   display: flex;
-  animation: marquee 20s linear infinite;
+  animation: marquee 60s linear infinite;
   white-space: nowrap;
   padding-left:15%;
 }
@@ -150,7 +219,7 @@ body{
 
 @keyframes marquee {
   0% {
-    transform: translateX(100%);
+    transform: translateX(50%);
   }
   100% {
     transform: translateX(-100%);
@@ -164,7 +233,7 @@ body{
 }
 
 .video-component video{
-height: 600px;
+height: 450px;
 width: 100%;
 object-fit: cover;
 }
@@ -172,9 +241,7 @@ object-fit: cover;
 
 /* News */
 .style-0 {
-  width: 90%;
-  max-width: 1400px;
-  margin: 40px auto;
+  margin: 40px 3vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -187,7 +254,6 @@ object-fit: cover;
 }
 
 .style-1 {
-  width: 100%;
   font-size: 34px;
   font-weight: 700;
   text-align: center;
@@ -202,7 +268,8 @@ object-fit: cover;
 .style-3 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
   box-sizing: border-box;
   padding: 0px;
   list-style: outside none none;
@@ -213,7 +280,7 @@ object-fit: cover;
 }
 
 .style-4, .style-9, .style-14 {
-  width: 31%;
+  width: 30%;
   margin-bottom: 20px;
   border-radius: 20px;
   border: 1px solid #004080;
@@ -288,4 +355,103 @@ object-fit: cover;
     font-size: 28px;
     margin-bottom: 36px;
   }
+.header{
+ flex-direction: column-reverse;
+ padding-top: 0.5rem;
+}
+
+  .header-logo {
+    width:15vw;
+    margin-right: 0px;
+}
+
+.header-title{
+   font-size: 6px;
+   background-color: transparent;
+}
+
+.header-main{
+  background-color: transparent;
+}
+
+.language-toggle{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  margin:  0 auto;
+}
+
+.language-toggle p{
+  font-size: 13px;
+}
+
+.serach-bar span{
+  height: 25px;
+  width: 25px;
+}
+
+.serach-bar .search-input{
+  height: 24px;
+  max-width:100px;
+}
+
+.video-component video {
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+}
+
+.marquee{
+  animation: marquee 90s linear infinite
+}
+
+.marquee-left{
+font-size: 15px;
+width: 25%;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.style-3{
+  gap: 2rem;
+}
+
+.programme-main{
+  justify-content: space-evenly;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.programme-image section img{
+  width: 280px;
+}
+
+
+.style-5, .style-10, .style-15 {
+  top: -4px;
+  left: 4px;
+}
+
+.main-heading{
+  text-align: center;
+  margin: 0 2vw;
+}
+
+.marquee p{
+  font-size: 13px !important;
+}
+
+.blocks p{
+  font-size: 12px;
+}
+
 }
