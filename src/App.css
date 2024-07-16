@@ -1,0 +1,291 @@
+body{
+  font-family: sans-serif;
+}
+.header {
+  font-family: Arial, sans-serif;
+}
+
+.header-top {
+  background-color: #f8f8f8;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header-top ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.header-top ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.header-logo {
+  width: 8vw;
+  margin-right: 20px;
+}
+
+.header-title {
+  font-size: 13px;
+}
+
+.header-title h1 {
+  margin: 0;
+}
+
+.header-nav {
+  background-color: #333;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.header-nav ul li {
+  margin-right: 20px;
+  position: relative;
+}
+
+.header-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Marquee */
+.marquee-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.marquee-container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  height: 40px;
+}
+
+.marquee-left {
+  background-color: #004080;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  white-space: nowrap;
+  width: 30%;
+  position: relative;
+}
+
+.marquee-left::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -10px; /* Adjust to control the slant */
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent; /* Adjust height to match the container */
+  border-left: 10px solid #004080; /* Adjust width and color to match the container */
+  border-bottom: 20px solid transparent; /* Adjust height to match the container */
+  z-index: 1; /* Ensure the slant is below the text */
+}
+.marquee-left{
+  font-weight: 900;
+}
+
+.marquee-right {
+  background-color: rgb(242, 239, 239);
+  color: black;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  flex-grow: 1;
+  position: relative;
+  padding-left: 30px; /* Add padding to start text a little bit inside */
+}
+
+.marquee-right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px; /* Adjust to control the slant */
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent; /* Adjust height to match the container */
+  border-right: 10px solid #acd3fb; /* Adjust width and color to match the container */
+  border-bottom: 20px solid transparent; /* Adjust height to match the container */
+  z-index: 1; /* Ensure the slant is below the text */
+}
+
+.marquee {
+  display: flex;
+  animation: marquee 20s linear infinite;
+  white-space: nowrap;
+  padding-left:15%;
+}
+
+.marquee p {
+  margin: 0 20px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Top video */
+.video-component{
+  padding: 0;
+  margin: 0;
+}
+
+.video-component video{
+height: 600px;
+width: 100%;
+object-fit: cover;
+}
+
+
+/* News */
+.style-0 {
+  width: 90%;
+  max-width: 1400px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0px;
+  border: 0px none rgb(0, 0, 0);
+  font: 16px / 16px Roboto, sans-serif;
+  vertical-align: baseline;
+}
+
+.style-1 {
+  width: 100%;
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 72px;
+  box-sizing: border-box;
+  margin: 0px 0px 72px;
+  padding: 0px;
+  border: 0px none rgb(0, 0, 0);
+  vertical-align: baseline;
+}
+
+.style-3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0px;
+  list-style: outside none none;
+  margin: 0px;
+  border: 0px none rgb(0, 0, 0);
+  font: 16px / 16px Roboto, sans-serif;
+  vertical-align: baseline;
+}
+
+.style-4, .style-9, .style-14 {
+  width: 31%;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  border: 1px solid #004080;
+  position: relative;
+  box-sizing: border-box;
+  list-style: outside none none;
+  padding: 0px;
+  font: 16px / 16px Roboto, sans-serif;
+  vertical-align: baseline;
+}
+
+.style-5, .style-10, .style-15 {
+  background: rgb(249, 249, 249) none repeat scroll 0% 0% / auto padding-box border-box;
+  padding: 24px 12px;
+  height: 100%;
+  position: relative;
+  right: -16px;
+  top: -24px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  margin: 0px;
+  border: 0px none rgb(0, 0, 0);
+  font: 16px / 16px Roboto, sans-serif;
+  vertical-align: baseline;
+}
+
+.style-7, .style-12 {
+  height: 30vh;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  border: 0px none rgb(0, 0, 0);
+  vertical-align: baseline;
+  border-radius: 15px;
+}
+
+.blocks {
+  margin-left: 0.5vw;
+}
+
+.blocks button {
+  color: white;
+  background-color: #004080;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  box-sizing: border-box;
+  border: 0;
+  padding: 10px;
+}
+.blocks p{
+  font-size: 1.2vw;
+  color: grey;
+  font-weight: 900;
+}
+.blocks h3{
+  line-height: 3vh;
+}
+
+@media (max-width: 768px) {
+  .style-4, .style-9, .style-14 {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .style-4, .style-9, .style-14 {
+    width: 100%;
+  }
+  .style-1 {
+    font-size: 28px;
+    margin-bottom: 36px;
+  }
+}
